@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 217.2 91.2% 59.8%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 224.3 76.3% 48%;
+}
+
+.bg-grid-white\/\[0\.02\] {
+  background-size: 30px 30px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  animation: gradient 3s ease infinite;
+}
+
+.animate-gradient-slow {
+  animation: gradient 6s ease infinite;
+}
+
+.cursor {
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.glow-white {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.2), 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+.glow-gradient {
+  filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.4)) drop-shadow(0 0 16px rgba(59, 130, 246, 0.3))
+    drop-shadow(0 0 24px rgba(236, 72, 153, 0.2));
+  animation: glow-colors 3s ease infinite;
+}
+
+@keyframes glow-colors {
+  0% {
+    filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.4)) drop-shadow(0 0 16px rgba(168, 85, 247, 0.3))
+      drop-shadow(0 0 24px rgba(168, 85, 247, 0.2));
+  }
+  33% {
+    filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.4)) drop-shadow(0 0 16px rgba(59, 130, 246, 0.3))
+      drop-shadow(0 0 24px rgba(59, 130, 246, 0.2));
+  }
+  66% {
+    filter: drop-shadow(0 0 8px rgba(236, 72, 153, 0.4)) drop-shadow(0 0 16px rgba(236, 72, 153, 0.3))
+      drop-shadow(0 0 24px rgba(236, 72, 153, 0.2));
+  }
+  100% {
+    filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.4)) drop-shadow(0 0 16px rgba(168, 85, 247, 0.3))
+      drop-shadow(0 0 24px rgba(168, 85, 247, 0.2));
+  }
+}
